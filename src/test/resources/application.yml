@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: "/api/brokage"
+spring:
+  application:
+    name: brokage
+  profiles:
+    active: ${PROFILE:test}
+  jackson:
+    serialization:
+      indent_output: true
+      FAIL_ON_EMPTY_BEANS: false
+    deserialization:
+      fail_on_unknown_properties: false
+  datasource:
+    name: test
+    generate-unique-name: false
+    password: sa
+    username: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging:
+  level:
+    root: info

@@ -1,0 +1,15 @@
+server:
+  port: 8080
+  servlet:
+    context-path: "/api/brokage"
+spring:
+  application:
+    name: brokage
+  profiles:
+    active: ${PROFILE:dev}
+  jackson:
+    serialization:
+      indent_output: true
+      FAIL_ON_EMPTY_BEANS: false
+    deserialization:
+      fail_on_unknown_properties: false
